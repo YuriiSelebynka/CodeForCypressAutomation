@@ -10,7 +10,7 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 //run js file
 const homePage = new HomePage();
 const productPage = new ProductPage();
-//let name;
+let name;
 
 //const url = 'https://rahulshettyacademy.com/angularpractice/'
 Given('I open Ecommerce Page', () => {
