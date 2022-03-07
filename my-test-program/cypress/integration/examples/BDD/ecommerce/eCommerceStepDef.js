@@ -10,7 +10,7 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 //run js file
 const homePage = new HomePage();
 const productPage = new ProductPage();
-//let name = dataTable.rawTable[1][0];
+//let name;
 
 //const url = 'https://rahulshettyacademy.com/angularpractice/'
 Given('I open Ecommerce Page', () => {
@@ -64,7 +64,8 @@ Then('select the country submit and verify Thankyou', () => {
 When('I fill the form details', function(dataTable) {
   //[name, gender], [Yurii, male   ]
   name = dataTable.rawTable[1][0];
-  homePage.getEditBox().type(dataTable.rawTable[1][0]);
+  //homePage.getEditBox().type(dataTable.rawTable[1][0]);
+    homePage.getEditBox().type(dataTable.name);
   homePage.getGender().select(dataTable.rawTable[1][1]);
 })
 
